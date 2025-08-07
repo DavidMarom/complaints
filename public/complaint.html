@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Complaint</title>
+</head>
+
+<body>
+    <h1>Submit a Complaint</h1>
+    <form action="/submit" method="POST" class="form-container">
+        <div class="grid-container">
+
+
+            <label> Category: </label>
+            <input type="text" name="category" />
+
+            <label>
+                Message:
+            </label>
+            <input type="text" name="message" />
+
+            <input type="hidden" name="timestamp" id="timestamp" />
+
+            <script>
+                document.getElementById('timestamp').value = Math.floor(Date.now() / 1000);
+            </script>
+
+            <div></div>
+            <button type="submit" class="submit-button">Send</button>
+        </div>
+    </form>
+
+
+</body>
+
+</html>

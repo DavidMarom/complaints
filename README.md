@@ -1,6 +1,6 @@
 # Complaints Management System
 
-## How to Run:
+## Deploy and run the application:
 ```bash
 npm install
 npm start
