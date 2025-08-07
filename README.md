@@ -3,5 +3,5 @@
 ## Deploy and run the application:
 ```bash
 npm install
-npm start
+npm run dev
 ```
