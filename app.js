@@ -11,9 +11,12 @@ app.use(express.json());
 
 // Route to receive the POST
 app.post('/submit', (req, res) => {
-    const { name, email } = req.body;
-    console.log('Received:', name, email);
-    res.send(`Thank you, ${name}! We received your email: ${email}`);
+    const { category, message, timestamp } = req.body;
+    console.log('Received:', category);
+    console.log('Received:', message);
+    console.log('Received:', timestamp);
+
+    res.sendFile(path.join(__dirname, 'public', 'thankyou.html'));
 });
 
 app.listen(port, () => {
